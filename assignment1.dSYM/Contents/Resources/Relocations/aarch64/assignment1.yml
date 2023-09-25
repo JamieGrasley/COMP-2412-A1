@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jamiegrasley/Desktop/Software Eng/Data Structures/A1 GH/COMP-2412-A1/assignment1'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _build, symObjAddr: 0x0, symBinAddr: 0x10000358C, symSize: 0x11C }
+  - { offsetInCU: 0x8B, offset: 0x8B, size: 0x8, addend: 0x0, symName: _build, symObjAddr: 0x0, symBinAddr: 0x10000358C, symSize: 0x11C }
+  - { offsetInCU: 0xBD, offset: 0xBD, size: 0x8, addend: 0x0, symName: _isEmpty, symObjAddr: 0x11C, symBinAddr: 0x1000036A8, symSize: 0x24 }
+  - { offsetInCU: 0xE5, offset: 0xE5, size: 0x8, addend: 0x0, symName: _isFull, symObjAddr: 0x140, symBinAddr: 0x1000036CC, symSize: 0x44 }
+  - { offsetInCU: 0x10D, offset: 0x10D, size: 0x8, addend: 0x0, symName: _enqueue, symObjAddr: 0x184, symBinAddr: 0x100003710, symSize: 0xC8 }
+  - { offsetInCU: 0x13F, offset: 0x13F, size: 0x8, addend: 0x0, symName: _dequeue, symObjAddr: 0x24C, symBinAddr: 0x1000037D8, symSize: 0xD8 }
+  - { offsetInCU: 0x183, offset: 0x183, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x324, symBinAddr: 0x1000038B0, symSize: 0x5B4 }
+...
