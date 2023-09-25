@@ -70,7 +70,7 @@ Begin Test Case 5
 Building a queue of length 10
 Allocated memory for the struct at the address 0x1a376b0
 Initialize all elements of data to -1
-Dequeue() 8 
+Dequeue() -8 
 Dequeue() 77 
 Attempt to underflow the queue at 0x1a376b0 was prevented.
 Dequeue() 0 

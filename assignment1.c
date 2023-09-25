@@ -1,6 +1,6 @@
 /*------------------------------------------
 Jamie Grasley
-Felix
+Felix Ikokwu
 COMP-2412
 Assignment 1
 --------------------------------------------*/
@@ -32,7 +32,7 @@ void build(struct Queue **q, unsigned int length) {
     (*q)->size = length;
     printf("Building a queue of length %d\n", length);
     printf("Allocated memory for the struct at the address %p\n", *q);
-    printf("Initialize all element of data to -1\n");
+    printf("Initialize all elements of data to -1\n");
 }
 
 // Function to check if the queue is empty
@@ -48,7 +48,7 @@ int isFull(struct Queue* queue) {
 // Function to enqueue an element
 void enqueue(struct Queue* queue, char x) {
     if (isFull(queue)) {
-        printf("Attemp to overflow the queue at %p was prevented.\n", (void *) queue);
+        printf("Attempt to overflow the queue at %p was prevented.\n", (void *) queue);
     } else {
         if (isEmpty(queue)) {
             queue->head = 0;
@@ -64,7 +64,7 @@ void enqueue(struct Queue* queue, char x) {
 // Function to dequeue an element
 char dequeue(struct Queue* queue) {
     if (isEmpty(queue)) {
-        printf("Attemp to underflow the queue at %p was prevented.\n",  (void *) queue);
+        printf("Attempt to underflow the queue at %p was prevented.\n",  (void *) queue);
     } else {
         int x = queue->arr[queue->head];
         if (queue->head == queue->tail) {
@@ -79,7 +79,9 @@ char dequeue(struct Queue* queue) {
 
 int main(int argc, const char * argv[]) {
     struct Queue *qptr = NULL;
-
+  
+    printf("\n\nBegin Test Case 1\n\n");
+  
     build(&qptr, 5);
 
     // ====== Begin Test Case 1
@@ -101,7 +103,9 @@ int main(int argc, const char * argv[]) {
     // Free memory allocated for the queue
     if (qptr->arr) free(qptr->arr);
     if (qptr) free(qptr);
+  printf("\n\nBegin Test Case 2\n\n");
    build(&qptr, 5);
+   
   // ====== Begin Test Case 2
     enqueue(qptr, 1);
     printf("Dequeue() %d \n", dequeue(qptr));
@@ -128,6 +132,7 @@ int main(int argc, const char * argv[]) {
     // Free memory allocated for the queue
     if (qptr->arr) free(qptr->arr);
     if (qptr) free(qptr);
+   printf("\n\nBegin Test Case 3\n\n");
     build(&qptr, 9);
   // ====== Begin Test Case 3
     printf("Dequeue() %d \n", dequeue(qptr));
@@ -153,7 +158,8 @@ int main(int argc, const char * argv[]) {
     // Free memory allocated for the queue
     if (qptr->arr) free(qptr->arr);
     if (qptr) free(qptr);
-  
+
+    printf("\n\nBegin Test Case 4\n\n");
     build(&qptr, 5);
   // ====== Begin Test Case 4
     enqueue(qptr, 5);
@@ -165,10 +171,10 @@ int main(int argc, const char * argv[]) {
 // Free memory allocated for the queue
     if (qptr->arr) free(qptr->arr);
     if (qptr) free(qptr);
-  
+  printf("\n\nBegin Test Case 5\n\n");
   build(&qptr, 10);
   // ====== Begin Test Case 5
-    enqueue(qptr, 8);
+    enqueue(qptr, -8);
     enqueue(qptr, 77);
     printf("Dequeue() %d \n", dequeue(qptr));
     printf("Dequeue() %d \n", dequeue(qptr));
