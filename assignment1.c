@@ -184,5 +184,9 @@ int main(int argc, const char * argv[]) {
     printf("Dequeue() %d \n", dequeue(qptr));
     // ====== End Test Case 5
     printf("\n");
+    // Free memory allocated for the queue
+    if (qptr->arr) free(qptr->arr);
+    if (qptr) free(qptr);
+  printf("\n\nBegin Test Case 5\n\n");
     return 0;
 }
