@@ -48,7 +48,7 @@ int isFull(struct Queue* queue) { //Function definition takes a queue structure
 // Function to enqueue an element
 void enqueue(struct Queue* queue, char x) { //Function definition takes a queue structure and a char value.
     if (isFull(queue)) {//Checks if the queue is full
-        printf("Attempt to overflow the queue at %p was prevented.\n", (void *) queue);//If full the overflow is prevented at the given address
+        printf("enqueue() Attempt to overflow the queue at %p was prevented.\n", (void *) queue);//If full the overflow is prevented at the given address
     } else {
         if (isEmpty(queue)) { //If the queue is empty the head and tail are set.
             queue->head = 0;
@@ -64,7 +64,7 @@ void enqueue(struct Queue* queue, char x) { //Function definition takes a queue 
 // Function to dequeue an element
 char dequeue(struct Queue* queue) {
     if (isEmpty(queue)) {
-        printf("Attempt to underflow the queue at %p was prevented.\n",  (void *) queue); //If the queue is empty an underflow is prevented at the given address
+        printf("dequeue() Attempt to underflow the queue at %p was prevented.\n",  (void *) queue); //If the queue is empty an underflow is prevented at the given address
     } else {
         int x = queue->arr[queue->head]; 
         if (queue->head == queue->tail) { //If the queue becomes empty it fixes the head and tail values
